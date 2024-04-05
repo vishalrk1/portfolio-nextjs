@@ -20,10 +20,10 @@ const Info: React.FC = () => {
       className="flex md:flex-row flex-col items-center justify-center bg-secondary w-full px-8 lg:px-28 xl:px-60 py-5"
     >
       <div className="flex flex-col w-full md:w-1/2 mt-6 md:mt-32 mb-10">
-        <p className="text-2xl md:text-[32px] text-white font-poppins font-semibold align-top tracking-wider mb-4">
+        <p className="text-2xl md:text-[30px] text-white font-poppins font-semibold align-top tracking-wider mb-4">
           Hello, I'm
         </p>
-        <p className="text-4xl md:text-[52px] text-white font-poppins font-semibold align-top tracking-wider mb-4">
+        <p className="text-4xl md:text-[44px] text-white font-poppins font-semibold align-top tracking-wider mb-4">
           Vishal Karangale
         </p>
         <p className="text-base md:text-[18px] text-white  font-medium align-top tracking-wider">

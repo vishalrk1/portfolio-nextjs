@@ -24,8 +24,6 @@ const ContactSection = () => {
     }));
   };
 
-  console.log(templeteId);
-
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
@@ -54,17 +52,17 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center bg-secondary w-full px-6 md:px-60 pb-10"
+      className="flex flex-col justify-center bg-secondary w-full px-6 md:px-30 lg:px-60 pb-10"
     >
       <h1 className="font-semibold text-3xl md:text-4xl font-poppins mt-8">
         Connect With Me
       </h1>
-      <div className="flex flex-col md:flex-row justify-between">
-        <p className="text-white text-sm md:text-base font-poppins m-2 w-full md:w-1/2">
+      <div className="flex flex-col lg:flex-row justify-between">
+        <p className="text-white text-sm md:text-base font-poppins m-2 w-full lg:w-1/2">
           Hii, If you like my profile and want to connect with me please drop a
           message. i will get back to u lets build someting crazy
         </p>
-        <div className="w-full md:w-1/2 flex flex-col gap-2 mt-2">
+        <div className="w-full lg:w-1/2 flex flex-col gap-2 mt-2">
           <Input
             type="text"
             name="name"

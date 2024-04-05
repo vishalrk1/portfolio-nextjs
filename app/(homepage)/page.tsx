@@ -34,7 +34,7 @@ const Homepage = () => {
       <ProjectsSection />
       <section
         id="experience"
-        className="flex flex-col justify-center bg-secondary w-full px-6 md:px-60"
+        className="flex flex-col justify-center bg-secondary w-full px-6 md:px-30 lg:px-60"
       >
         <h1 className="font-semibold text-4xl font-poppins my-8">
           Work Experience
