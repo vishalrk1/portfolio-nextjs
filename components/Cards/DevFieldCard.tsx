@@ -51,13 +51,13 @@ const DevFieldCard: React.FC<DevFieldCardProps> = ({ index, devFieldItem }) => {
         },
       }}
     >
-      <Card className="bg-primary border-none pt-12 w-[200px] h-52">
+      <Card className="bg-primary border-none pt-6 md:pt-12 w-[150px] md:w-[200px] h-44 md:h-52">
         <CardFooter className="flex flex-col justify-center items-start mt-8">
           {devFieldItem.icon}
-          <p className="text-white font-poppins tracking-wide text-xl mt-2 font-semibold">
+          <p className="text-white font-poppins tracking-wide text-base md:text-xl mt-2 font-semibold">
             {devFieldItem.title_line1}
           </p>
-          <p className="text-white font-poppins tracking-wide text-xl mt-0 font-semibold">
+          <p className="text-white font-poppins tracking-wide text-base md:text-xl mt-0 font-semibold">
             {devFieldItem.title_line2}
           </p>
         </CardFooter>

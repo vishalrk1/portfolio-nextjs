@@ -10,9 +10,9 @@ const ProjectsSection = () => {
       initial="hidden"
       whileInView="show"
       // viewport={{ once: true, amount: 0.25 }}
-      className="flex flex-col justify-center bg-secondary w-full px-60 py-8"
+      className="flex flex-col justify-center bg-secondary w-full px-6 md:px-60 py-8"
     >
-      <h1 className="font-semibold text-4xl font-poppins mt-8">
+      <h1 className="font-semibold text-3xl md:text-4xl font-poppins mt-8">
         Featured Projects
       </h1>
       <p className="font-normal font-poppins text-lg text-white mt-2">
@@ -25,7 +25,6 @@ const ProjectsSection = () => {
             <ProjectCard
               projectItem={item}
               imagesAutoPlay={true}
-              onClick={() => {}}
               index={index}
               key={index}
             />

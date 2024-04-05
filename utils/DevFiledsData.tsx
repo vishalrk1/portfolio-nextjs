@@ -3,7 +3,7 @@ import { FaPython, FaReact, FaPlay } from "react-icons/fa";
 
 export const DevFieldsData = [
   {
-    icon: <FaReact size={28} className="text-white mb-8" />,
+    icon: <FaReact size={32} className="text-white mb-8" />,
     title_line1: "Web",
     title_line2: "Development",
   },

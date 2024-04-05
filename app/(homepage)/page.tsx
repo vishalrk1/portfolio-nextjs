@@ -25,7 +25,7 @@ const Homepage = () => {
       <Info />
       <SpaceSection />
       <AboutSection />
-      <section className="flex flex-wrap items-center bg-secondary w-full px-10 md:px-60 gap-6">
+      <section className="flex flex-wrap items-center justify-center md:justify-start bg-secondary w-full px-6 md:px-60 gap-4 md:gap-6">
         {DevFieldsData.map((item, index) => {
           return <DevFieldCard devFieldItem={item} index={index} key={index} />;
         })}
@@ -34,7 +34,7 @@ const Homepage = () => {
       <ProjectsSection />
       <section
         id="experience"
-        className="flex flex-col justify-center bg-secondary w-full px-10 md:px-60"
+        className="flex flex-col justify-center bg-secondary w-full px-6 md:px-60"
       >
         <h1 className="font-semibold text-4xl font-poppins my-8">
           Work Experience
