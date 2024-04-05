@@ -25,7 +25,7 @@ const Homepage = () => {
       <Info />
       <SpaceSection />
       <AboutSection />
-      <section className="flex flex-wrap items-center justify-center md:justify-start bg-secondary w-full px-6 md:px-60 gap-4 md:gap-6">
+      <section className="flex flex-wrap items-center justify-center md:justify-start bg-secondary w-full px-6 lg:px-60 gap-4 md:gap-6">
         {DevFieldsData.map((item, index) => {
           return <DevFieldCard devFieldItem={item} index={index} key={index} />;
         })}

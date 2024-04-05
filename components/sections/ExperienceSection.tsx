@@ -40,9 +40,9 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
               />
             </a>
             <h4 className="flex flex-col mt-2 ml-2 items-start text-lg font-medium leading-8 text-slate-700 md:flex-row lg:items-center">
-              <span className="flex-1 text-xl text-primary font-semibold">
+              <span className="flex-1 text-xl text-primary font-semibold font-poppins">
                 {experience.company}
-                <span className="mx-4 text-base font-normal text-slate-500">
+                <span className="mx-4 text-base font-normal font-poppins text-slate-500">
                   {" "}
                   {`${dayjs(experience.startDate).format("MMM YYYY")} - ${
                     experience.isCurrent
@@ -51,14 +51,14 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                   }`}
                 </span>
               </span>
-              <span className="text-sm font-normal text-slate-400">
+              <span className="text-sm font-normal text-slate-400 font-poppins">
                 {" "}
                 {`${totalMonths} months`}
               </span>
             </h4>
             <ul className="list-disc mx-4 my-3 space-y-3">
               {experience.description.map((txt) => (
-                <li className="font-light text-xs md:text-base text-white">
+                <li className="font-light text-xs md:text-base text-white font-poppins">
                   {txt}
                 </li>
               ))}

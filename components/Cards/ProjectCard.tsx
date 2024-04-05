@@ -6,6 +6,22 @@ import ImageCarousel from "../ImageCarousel/imageCarousel";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 import ProjectDialog from "../ProjectDialog/ProjectDialog";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+import { Button } from "../ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 interface ProjectCardProps {
   projectItem: Project;
@@ -64,41 +80,66 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             duration: 0.25,
           },
         }}
-        onClick={() => setIsOpen(true)}
-        className="flex flex-col w-full md:w-[380px] h-max rounded-lg bg-gradient-to-t from-slate-700 to-slate-800 p-2"
+        // onClick={() => setIsOpen(true)}
+        // className="flex flex-col w-full md:w-[380px] h-max rounded-lg bg-gradient-to-t from-slate-700 to-slate-800 p-2"
       >
-        <ImageCarousel
-          images={projectItem.images}
-          className="h-[100px] md:h-[200px]"
-          autoplay={imagesAutoPlay}
-        />
-        <div className="flex flex-row justify-between">
-          <p className="flex-1 text-left text-white font-semibold text-lg m-2 mb-0">
-            {projectItem.name}
-          </p>
-        </div>
-        <p className="text-left text-white text-xs m-2 mt-3 mb-0 text-ellipsis line-clamp-2 md:line-clamp-3">
-          {projectItem.description}
-        </p>
-        <div className="flex flex-row items-center mt-1 mb-0">
-          {projectItem.liveLink && (
-            <button
-              onClick={() => openInNewTab(projectItem.liveLink)}
-              className="flex flex-row items-center justify-center w-max text-left bg-primary text-CustomGrey font-semibold text-xs rounded-md m-2 mb-0 p-2 px-6"
+        <Card className="w-full md:w-[380px] h-max rounded-lg bg-gradient-to-t from-slate-700 to-slate-800 border-0">
+          <CardHeader>
+            <Tooltip>
+              <TooltipTrigger>
+                <CardTitle
+                  onClick={() => setIsOpen(true)}
+                  className="text-white font-semibold text-lg cursor-pointer text-start"
+                >
+                  {projectItem.name}
+                </CardTitle>
+              </TooltipTrigger>
+              <TooltipContent align="start" side="bottom">
+                <p>Explore Project Details</p>
+              </TooltipContent>
+            </Tooltip>
+            <CardDescription className="text-gray-400 md:line-clamp-4">
+              {projectItem.description}
+            </CardDescription>
+            <Accordion
+              type="single"
+              collapsible
+              className="hidden md:block border-0"
             >
-              <p className="text-sm text-white">Live Project</p>
-            </button>
-          )}
-          {projectItem.githubLink && (
-            <button
-              onClick={() => openInNewTab(projectItem.githubLink)}
-              className="flex flex-row items-center justify-center w-max text-left text-CustomGrey font-semibold text-xs border-primary border-2 rounded-md m-2 mb-0 p-2 px-4"
-            >
-              <Github className="inline-block mr-2" size={18} color="white" />
-              <p className="text-sm text-white">Github</p>
-            </button>
-          )}
-        </div>
+              <AccordionItem value="images" className="border-0">
+                <AccordionTrigger className="w-full text-white">
+                  Demo Images
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ImageCarousel
+                    images={projectItem.images}
+                    className="h-[100px] md:h-[200px]"
+                    autoplay={imagesAutoPlay}
+                  />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </CardHeader>
+          <CardFooter className="space-x-2">
+            {projectItem.liveLink && (
+              <Button
+                onClick={() => openInNewTab(projectItem.liveLink)}
+                variant="default"
+              >
+                Live Demo
+              </Button>
+            )}
+            {projectItem.githubLink && (
+              <Button
+                variant="outline"
+                className="bg-transparent text-white"
+                onClick={() => openInNewTab(projectItem.githubLink)}
+              >
+                Github
+              </Button>
+            )}
+          </CardFooter>
+        </Card>
       </motion.div>
     </>
   );

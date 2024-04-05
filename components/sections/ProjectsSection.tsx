@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       initial="hidden"
       whileInView="show"
       // viewport={{ once: true, amount: 0.25 }}
-      className="flex flex-col justify-center bg-secondary w-full px-6 md:px-60 py-8"
+      className="flex flex-col justify-center bg-secondary w-full px-6 lg:px-60 py-8"
     >
       <h1 className="font-semibold text-3xl md:text-4xl font-poppins mt-8">
         Featured Projects
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
         I have worked on many projects over the course of being developer, here
         are a few of my live, real world projects.
       </p>
-      <div className="flex flex-wrap justify-evenly gap-6 mt-6">
+      <div className="flex flex-wrap justify-between lg:justify-evenly gap-4 mt-6">
         {ProjectsData.filter((item) => item.isFeatured).map((item, index) => {
           return (
             <ProjectCard

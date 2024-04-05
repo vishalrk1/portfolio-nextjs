@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 left-0 bg-[#181824] flex justify-between md:justify-center items-center tracking-wider h-[80px] px-4 md:px-40 py-5 md:space-x-52">
-      <h1 className="text-base md:text-[28px] font-semibold text-primary">Vishal</h1>
+      <h1 className="text-base md:text-[28px] font-semibold text-primary">vishal</h1>
       <div className="flex space-x-3 md:space-x-10">
         {navRoutes.map((item, index) => (
           <Link href={item.path} key={index}>

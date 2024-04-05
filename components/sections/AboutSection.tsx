@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section id='about' className="flex flex-col justify-center bg-secondary w-full px-4 md:px-60 py-8">
+    <section id='about' className="flex flex-col justify-center bg-secondary w-full px-4 lg:px-60 py-8">
       <h1 className="font-semibold text-2xl md:text-3xl font-poppins">About Me</h1>
       <p className="font-normal font-poppins text-sm md:text-lg text-white mt-3">
         Hi, my name is Vishal Karangale, i am a Fullstack web developer, Mobile
