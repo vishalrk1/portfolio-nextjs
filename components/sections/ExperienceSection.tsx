@@ -57,8 +57,11 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
               </span>
             </h4>
             <ul className="list-disc mx-4 my-3 space-y-3">
-              {experience.description.map((txt) => (
-                <li className="font-light text-xs md:text-base text-white font-poppins">
+              {experience.description.map((txt, index) => (
+                <li
+                  key={index}
+                  className="font-light text-xs md:text-base text-white font-poppins"
+                >
                   {txt}
                 </li>
               ))}
@@ -67,32 +70,6 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         </li>
       </ul>
     </>
-    // <div className="flex flex-row items-start gap-4 relative py-4">
-    //   <div className="z-10">
-    //     <div className="bg-primary p-2 rounded-full">
-    //       <Calendar size={25} color="white" />
-    //     </div>
-    //   </div>
-    //   <div className="flex flex-col justify-center w-full h-max">
-    //     <p className="text-primary text-2xl font-semibold">
-    //       {experience.position}
-    //     </p>
-    //     <p className="flex items-center mt-2 sm:text-base text-sm font-normal text-white">
-    //       {experience.company} - {`${totalMonths} months`}{" "}
-    //       {experience.isCurrent && (
-    //         <p className="ml-1 sm:text-base text-sm font-bold text-green-500">
-    //           {`- Current`}
-    //         </p>
-    //       )}
-    //     </p>
-    //     <ul className="list-disc mx-4 my-3 space-y-3">
-    //       {experience.description.map((txt) => (
-    //         <li className="font-light text-xs md:text-base text-white">{txt}</li>
-    //       ))}
-    //     </ul>
-    //   </div>
-    //   <div className="absolute left-5 top-1/2 transform -translate-y-1/2 border-l-2 border-dotted border-gray-400 h-full"></div>
-    // </div>
   );
 };
 
