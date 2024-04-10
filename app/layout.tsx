@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar'/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ToasterProvider } from "@/providers/ToastProvider";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ToasterProvider />
-        <TooltipProvider delayDuration={200}>
+        <TooltipProvider delayDuration={100}>
           <Navbar />
           {children}
+          <Footer />
         </TooltipProvider>
       </body>
     </html>
