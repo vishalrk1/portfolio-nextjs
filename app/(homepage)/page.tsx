@@ -21,7 +21,7 @@ const Homepage = () => {
   if (!isMounted) return null;
 
   return (
-    <main className="flex flex-col justify-center text-primary">
+    <main className="flex flex-col justify-center text-primary min-h-screen">
       <Info />
       <SpaceSection />
       <AboutSection />

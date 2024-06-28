@@ -229,9 +229,9 @@ export const ProjectsData = [
   {
     name: "Jewellery Store Website",
     description:
-      "Developed a fully responsive Jewellery Store website using Reactjs, Tailwind css, context API and Django for backend. showcasing a wide range of jewellery products with user-friendly navigation and interactive features.",
-    liveLink: "https://luxeselect.vercel.app/",
-    githubLink: "https://github.com/vishalrk1/Ecomm",
+      "Developed a fully responsive Jewellery Store website using Next js, Tailwind css, context API and Django for backend. showcasing a wide range of jewellery products with user-friendly navigation and interactive features.",
+    liveLink: "https://illusionjewellery.vercel.app/",
+    githubLink: "https://github.com/vishalrk1/JewelleryShop",
     isFeatured: true,
     images: [
       {
