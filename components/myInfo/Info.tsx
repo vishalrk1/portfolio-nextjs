@@ -66,14 +66,6 @@ const Info: React.FC = () => {
           <Link
             data-aos="fade-up"
             data-aos-delay="150"
-            href="https://github.com/vishalrk1"
-            target="_"
-          >
-            <FaSquareGithub size={28} color="white" />
-          </Link>
-          <Link
-            data-aos="fade-up"
-            data-aos-delay="200"
             href="https://twitter.com/KarangaleVishal"
             target="_"
           >
@@ -81,7 +73,7 @@ const Info: React.FC = () => {
           </Link>
           <Link
             data-aos="fade-up"
-            data-aos-delay="250"
+            data-aos-delay="200"
             href="https://www.instagram.com/vishal_rk1/"
             target="_"
           >
