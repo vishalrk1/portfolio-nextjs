@@ -25,7 +25,7 @@ const Info: React.FC = () => {
           data-aos-delay="20"
           className="text-2xl md:text-[30px] text-white font-poppins font-semibold align-top tracking-wider mb-4"
         >
-          Hello, I'm
+          Hello, I&apos;m
         </p>
         <p
           data-aos="fade-up"
@@ -39,7 +39,7 @@ const Info: React.FC = () => {
           data-aos-delay="60"
           className="text-base md:text-[16px] text-white  font-light align-top tracking-wider"
         >
-          I'm a software developer specializing in building and developing
+          I&apos;m a software developer specializing in building and developing
           softwares with remarkable user experience. Having experince React,
           React Native zand Next.JS, I build applications that are scalable and
           flexible.

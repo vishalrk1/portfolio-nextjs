@@ -12,6 +12,7 @@ const FeaturedProjectsSection = () => {
       {ProjectsData.filter((item) => item.isFeatured).map((item, index) => (
         <div
           data-aos="fade-up"
+          key={`${item.name}-${index}`}
           data-aos-delay="50"
           className={`flex items-center  ${
             item.isFlipped ? `flex-col md:flex-row-reverse` : `flex-col md:flex-row`
