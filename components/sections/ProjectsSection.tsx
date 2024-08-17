@@ -20,7 +20,7 @@ const ProjectsSection = () => {
         are a few of my live, real world projects.
       </p>
       <div className="flex flex-wrap justify-evenly lg:justify-evenly gap-3 mt-6">
-        {ProjectsData.filter((item) => item.isFeatured).map((item, index) => {
+        {ProjectsData.filter((item) => !item.isFeatured).map((item, index) => {
           return (
             <ProjectCard
               projectItem={item}

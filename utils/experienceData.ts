@@ -28,6 +28,6 @@ export const ExperienceData = [
     ],
     isCurrent: false,
     startDate: "6-9-2022",
-    endDate: "1-9-2023",
+    endDate: "12-9-2022",
   },
 ] as Experience[];

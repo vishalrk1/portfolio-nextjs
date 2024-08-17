@@ -1,10 +1,5 @@
-"use client"
-import React, { useEffect } from "react";
-import {
-  motion,
-  useAnimation,
-  useInView,
-} from "framer-motion";
+"use client";
+import React from "react";
 import { Card, CardFooter } from "../ui/card";
 
 interface DevFieldCardProps {
@@ -17,39 +12,12 @@ interface DevFieldCardProps {
 }
 
 const DevFieldCard: React.FC<DevFieldCardProps> = ({ index, devFieldItem }) => {
-  const control = useAnimation();
-  const devFieldRef = React.useRef(null);
-  const inView = useInView(devFieldRef);
-
-  useEffect(() => {
-    if (inView) {
-      control.start({
-        x: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          delay: 0.5 * index,
-          duration: 0.75,
-          ease: "easeOut",
-        },
-      });
-    }
-  }, [control, inView]);
-
   return (
-    <motion.div
-      ref={devFieldRef}
-      initial={{
-        x: -100,
-        opacity: 0,
-      }}
-      animate={control}
-      whileHover={{
-        scale: 1.08,
-        transition: {
-          duration: 0.25,
-        },
-      }}
+    <div
+      data-aos="fade-right"
+      data-aos-delay={500*index}
+      data-aos-duration={150}
+      data-aos-once="true"
     >
       <Card className="bg-primary border-none pt-6 md:pt-12 w-[150px] md:w-[200px] h-44 md:h-52">
         <CardFooter className="flex flex-col justify-center items-start mt-8">
@@ -62,7 +30,7 @@ const DevFieldCard: React.FC<DevFieldCardProps> = ({ index, devFieldItem }) => {
           </p>
         </CardFooter>
       </Card>
-    </motion.div>
+    </div>
   );
 };
 

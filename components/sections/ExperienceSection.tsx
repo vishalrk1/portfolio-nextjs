@@ -1,10 +1,9 @@
-import { Calendar } from "lucide-react";
 import React from "react";
 import dayjs from "dayjs";
 import { Experience } from "@/utils/types";
-
-import logo from "../../assets/jio-logo.png";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface ExperienceSectionProps {
   experience: Experience;
@@ -14,62 +13,59 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   experience,
 }) => {
   const endDate = experience.isCurrent ? dayjs() : dayjs(experience.endDate);
-  const totalMonths = experience.isCurrent
-    ? endDate.diff(experience.startDate, "months")
-    : endDate.diff(experience.startDate, "months");
+  const totalMonths = endDate.diff(experience.startDate, "months");
+
+  let displayDuration;
+
+  if (totalMonths > 12) {
+    const years = totalMonths / 12;
+    displayDuration = `${years.toFixed(1)} ${years === 1 ? "year" : "years"}`;
+  } else {
+    displayDuration = `${totalMonths} ${
+      totalMonths === 1 ? "month" : "months"
+    }`;
+  }
 
   return (
-    <>
-      <ul
-        aria-label="experience feed"
-        role="feed"
-        className="relative flex flex-col gap-12 py-12 pl-6 before:absolute before:top-0 before:left-8 before:h-full before:-translate-x-1/2 before:border before:border-dashed before:border-slate-200 after:absolute after:top-6 after:left-8 after:bottom-6 after:-translate-x-1/2 after:border after:border-slate-200 "
-      >
-        <li role="article" className="relative pl-8 ">
-          <div className="flex flex-col flex-1 gap-4">
-            <a
-              href="#"
-              className="absolute z-10 inline-flex items-center justify-center w-12 h-12 border-0 text-white rounded-lg p-2 bg-background -left-4 ring-0"
-            >
-              <Image
-                src={experience.companyLogo}
-                alt="user name"
-                width="60"
-                height="60"
-                className="max-w-full rounded-lg"
-              />
-            </a>
-            <h4 className="flex flex-col mt-2 ml-2 items-start text-lg font-medium leading-8 text-slate-700 md:flex-row lg:items-center">
-              <span className="flex-1 text-xl text-primary font-semibold font-poppins">
-                {experience.company}
-                <span className="mx-4 text-base font-normal font-poppins text-slate-500">
-                  {" "}
-                  {`${dayjs(experience.startDate).format("MMM YYYY")} - ${
-                    experience.isCurrent
-                      ? "Present"
-                      : endDate.format("MMM YYYY")
-                  }`}
-                </span>
-              </span>
-              <span className="text-sm font-normal text-slate-400 font-poppins">
-                {" "}
-                {`${totalMonths} months`}
-              </span>
-            </h4>
-            <ul className="list-disc mx-4 my-3 space-y-3">
-              {experience.description.map((txt, index) => (
-                <li
-                  key={index}
-                  className="font-light text-xs md:text-base text-white font-poppins"
-                >
-                  {txt}
-                </li>
-              ))}
-            </ul>
+    <div
+      className="experience-timeline relative py-8 pl-8 before:absolute before:top-0 before:left-4 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:to-secondary"
+      data-aos="fade-up"
+    >
+      <div className="experience-card p-6 transition-all duration-300">
+        <div className="flex items-center mb-4">
+          <div className="company-logo-wrapper absolute -left-3 z-10">
+            <Image
+              src={experience.companyLogo}
+              alt={`${experience.company} logo`}
+              width={60}
+              height={60}
+              className="rounded-full border-4 border-background"
+            />
           </div>
-        </li>
-      </ul>
-    </>
+          <h3 className="text-2xl font-bold text-primary ml-2">
+            {experience.company}
+          </h3>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <p className="font-medium text-slate-400">
+            {`${dayjs(experience.startDate).format("MMM YYYY")} - ${
+              experience.isCurrent ? "Present" : endDate.format("MMM YYYY")
+            }`}
+          </p>
+          <span className="text-sm font-medium text-slate-400 mt-2 md:mt-0">
+            {displayDuration}
+          </span>
+        </div>
+        <ul className="space-y-3 mt-4">
+          {experience.description.map((txt, index) => (
+            <li key={index} className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <p className="text-white text-sm md:text-base">{txt}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

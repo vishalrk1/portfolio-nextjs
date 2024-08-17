@@ -52,7 +52,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center bg-secondary w-full px-6 md:px-30 lg:px-60 pb-10"
+      className="flex flex-col justify-center bg-secondary w-full px-6 md:px-12 xl:px-40 pb-10"
     >
       <h1 className="font-semibold text-3xl md:text-4xl font-poppins mt-8">
         Connect With Me

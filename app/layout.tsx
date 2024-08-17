@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar'/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ToasterProvider } from "@/providers/ToastProvider";
-import Footer from "@/components/footer/footer";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
         <TooltipProvider delayDuration={100}>
           <Navbar />
           {children}
-          <Footer />
+          <Analytics />
         </TooltipProvider>
       </body>
     </html>

@@ -118,10 +118,6 @@ export const BackendData = [
     icon: FirebaseIcon,
     name: "Firebase",
   },
-  {
-    icon: DjangoIcon,
-    name: "Django rest ",
-  },
 ] as Skill[];
 
 export const COMBINED_DATA = [

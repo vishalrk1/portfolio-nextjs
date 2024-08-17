@@ -20,33 +20,71 @@ const Info: React.FC = () => {
       className="flex md:flex-row flex-col items-center justify-center bg-secondary w-full px-8 lg:px-28 xl:px-60 py-5"
     >
       <div className="flex flex-col w-full md:w-1/2 mt-6 md:mt-32 mb-10">
-        <p className="text-2xl md:text-[30px] text-white font-poppins font-semibold align-top tracking-wider mb-4">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="20"
+          className="text-2xl md:text-[30px] text-white font-poppins font-semibold align-top tracking-wider mb-4"
+        >
           Hello, I'm
         </p>
-        <p className="text-4xl md:text-[44px] text-white font-poppins font-semibold align-top tracking-wider mb-4">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="40"
+          className="text-4xl md:text-[44px] text-white font-poppins font-semibold align-top tracking-wider mb-4"
+        >
           Vishal Karangale
         </p>
-        <p className="text-base md:text-[18px] text-white  font-medium align-top tracking-wider">
-          Freelance Fullstack developer, & AI/ML enthusiast. I create seamless
-          web experiences and AI applications for end-users.
+        <p
+          data-aos="fade-up"
+          data-aos-delay="60"
+          className="text-base md:text-[16px] text-white  font-light align-top tracking-wider"
+        >
+          I'm a software developer specializing in building and developing
+          softwares with remarkable user experience. Having experince React,
+          React Native zand Next.JS, I build applications that are scalable and
+          flexible.
         </p>
-        <div className="flex flex-row mt-4 md:mt-10 gap-5">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="80"
+          className="flex flex-row mt-4 md:mt-10 gap-5"
+        >
           <AboutmeButton />
           <ProjectButton />
         </div>
       </div>
       <div className="flex md:justify-end items-center w-full md:w-1/2 md:mt-24 mb-10 gap-4">
         <div className="flex flex-row md:flex-col items-center justify-center gap-4">
-          <Link href="https://linkedin.com/in/vishal-karangale" target="_">
+          <Link
+            data-aos="fade-up"
+            data-aos-delay="100"
+            href="https://linkedin.com/in/vishal-karangale"
+            target="_"
+          >
             <FaLinkedin size={28} color="white" />
           </Link>
-          <Link href="https://github.com/vishalrk1" target="_">
+          <Link
+            data-aos="fade-up"
+            data-aos-delay="150"
+            href="https://github.com/vishalrk1"
+            target="_"
+          >
             <FaSquareGithub size={28} color="white" />
           </Link>
-          <Link href="https://twitter.com/KarangaleVishal" target="_">
+          <Link
+            data-aos="fade-up"
+            data-aos-delay="200"
+            href="https://twitter.com/KarangaleVishal"
+            target="_"
+          >
             <FaSquareXTwitter size={28} color="white" />
           </Link>
-          <Link href="https://www.instagram.com/vishal_rk1/" target="_">
+          <Link
+            data-aos="fade-up"
+            data-aos-delay="250"
+            href="https://www.instagram.com/vishal_rk1/"
+            target="_"
+          >
             <FaSquareInstagram size={28} color="white" />
           </Link>
         </div>

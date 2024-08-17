@@ -12,6 +12,7 @@ export interface Project {
   liveLink: string;
   githubLink: string;
   isFeatured: boolean;
+  isFlipped: boolean;
   images: Image[];
   skills: Skill[];
   projectFeatures: String[];

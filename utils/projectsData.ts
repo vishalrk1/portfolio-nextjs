@@ -14,6 +14,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/seefood-ai",
     isFeatured: true,
     liveLink: "https://seefoodai.netlify.app/",
+    isFlipped: false,
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-1.png",
@@ -47,12 +48,8 @@ export const ProjectsData = [
     skills: [
       PrograminLanguagesData[0],
       FrontendData[2],
-      AI_DSData[0],
-      AI_DSData[1],
       AI_DSData[2],
       BackendData[0],
-      BackendData[1],
-      BackendData[3],
     ] as Skill[],
     projectFeatures: [
       "Image Classification",
@@ -69,6 +66,7 @@ export const ProjectsData = [
     githubLink:
       "https://github.com/vishalrk1/megalinks-website-nextjs/tree/main",
     isFeatured: true,
+    isFlipped: true,
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-1.png",
@@ -100,14 +98,12 @@ export const ProjectsData = [
       },
     ] as Image[],
     skills: [
-      PrograminLanguagesData[1],
       PrograminLanguagesData[2],
       FrontendData[0],
       FrontendData[2],
       FrontendData[3],
       FrontendData[4],
       FrontendData[6],
-      BackendData[2],
     ] as Skill[],
     projectFeatures: [
       "Free Video Editing Resources",
@@ -127,6 +123,7 @@ export const ProjectsData = [
     liveLink: "https://play.google.com/store/apps/details?id=com.vk.MegaLinks",
     githubLink: "https://github.com/vishalrk1/MegaLinksApk",
     isFeatured: true,
+    isFlipped: false,
     images: [
       {
         url: "https://github.com/vishalrk1/MegaLinksApk/assets/59719046/7a9bb39c-2a0c-4443-af0c-ad4037d15fba",
@@ -136,11 +133,7 @@ export const ProjectsData = [
     skills: [
       PrograminLanguagesData[1],
       PrograminLanguagesData[2],
-      FrontendData[0],
-      FrontendData[2],
-      FrontendData[3],
-      FrontendData[4],
-      FrontendData[6],
+      FrontendData[5],
       BackendData[2],
     ] as Skill[],
     projectFeatures: [
@@ -162,6 +155,7 @@ export const ProjectsData = [
     githubLink:
       "https://github.com/vishalrk1/Ecommerce-website-react/tree/master",
     isFeatured: false,
+    isFlipped: true,
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/Ecommerce-website-react/master/demo-images/img-1.png",
@@ -233,25 +227,30 @@ export const ProjectsData = [
     liveLink: "https://illusionjewellery.vercel.app/",
     githubLink: "https://github.com/vishalrk1/JewelleryShop",
     isFeatured: true,
+    isFlipped: true,
     images: [
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/Ecomm/main/screenshots/Homescreen%20-%20Logged%20In.png",
+        url: "https://github.com/user-attachments/assets/f68835e2-ff91-4417-ae1b-2ce4512a4ae5",
+        alt: "project-3-1",
+      },
+      {
+        url: "https://github.com/user-attachments/assets/65730ede-e480-40f6-843b-7336b4fa81d9",
         alt: "project-3",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/Ecomm/main/screenshots/Profile%20Details%20Page.png",
+        url: "https://github.com/user-attachments/assets/2b8a063c-b333-4ee2-a146-437ff3289674",
         alt: "project-3",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/Ecomm/main/screenshots/Product%20Added%20To%20Cart%20-%20Toast.png",
+        url: "https://github.com/user-attachments/assets/35a0a5c5-25f0-4a74-b4ad-2e571884432a",
         alt: "project-3",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/Ecomm/main/screenshots/Products%20Page%20-%20Bracelets.png",
+        url: "https://github.com/user-attachments/assets/9af01a8b-e69e-4a1f-999d-62c7c0a4130a",
         alt: "project-3",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/Ecomm/main/screenshots/Your%20Cart%20Page%20.png",
+        url: "https://github.com/user-attachments/assets/bda95840-6dba-48e3-a736-066e1a79d7af",
         alt: "project-3",
       },
     ] as Image[],
@@ -259,11 +258,8 @@ export const ProjectsData = [
       PrograminLanguagesData[1],
       FrontendData[0],
       FrontendData[2],
-      FrontendData[3],
       FrontendData[4],
       FrontendData[6],
-      BackendData[0],
-      BackendData[3],
     ] as Skill[],
     projectFeatures: [
       "Fully Responsive",
@@ -292,7 +288,8 @@ export const ProjectsData = [
       "An NLP model to classify abstract sentences into the role they play (e.g. objective, methods, results, etc..) to enable researchers to skim through the literature and dive deeper when necessary.",
     githubLink: "https://github.com/vishalrk1/SkimLit",
     liveLink: "",
-    isFeatured: true,
+    isFeatured: false,
+    isFlipped: true,
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/SkimLit/main/images/app.png",
@@ -313,7 +310,8 @@ export const ProjectsData = [
       "Developed Megalinks website and admin panel using Next JS, Tailwind CSS, and TypeScript, with state management powered by Redux, ensuring a cohesive user experience and efficient data handling across platforms",
     liveLink: "",
     githubLink: "https://github.com/vishalrk1/megalinks-admin-portal",
-    isFeatured: true,
+    isFeatured: false,
+    isFlipped: false,
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/megalinks-admin-portal/main/screenshots/img-1.png",
