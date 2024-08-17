@@ -19,7 +19,7 @@ const Info: React.FC = () => {
       id="info"
       className="flex md:flex-row flex-col items-center justify-center bg-secondary w-full px-8 lg:px-28 xl:px-60 py-5"
     >
-      <div className="flex flex-col w-full md:w-1/2 mt-6 md:mt-32 mb-10">
+      <div className="flex flex-col w-full md:w-1/2 mt-6 md:mt-16 mb-10">
         <p
           data-aos="fade-up"
           data-aos-delay="20"
