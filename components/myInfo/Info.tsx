@@ -17,7 +17,7 @@ const Info: React.FC = () => {
   return (
     <section
       id="info"
-      className="flex md:flex-row flex-col items-center justify-center bg-secondary w-full px-8 lg:px-28 xl:px-60 py-5"
+      className="flex md:flex-row flex-col items-center justify-center bg-secondary w-full px-4 lg:px-28 xl:px-60 py-5"
     >
       <div className="flex flex-col w-full md:w-1/2 mt-6 md:mt-16 mb-10">
         <p
@@ -47,7 +47,7 @@ const Info: React.FC = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="80"
-          className="flex flex-row mt-4 md:mt-10 gap-5"
+          className="flex flex-row mt-4 md:mt-10 gap-2 md:gap-5"
         >
           <AboutmeButton />
           <ProjectButton />
