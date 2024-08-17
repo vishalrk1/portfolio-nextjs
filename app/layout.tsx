@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar'/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ToasterProvider } from "@/providers/ToastProvider";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
+import Favicon from "./favicon.png";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Vishal Karangale",
   description: "Personal website of Vishal Karangale",
+  icons: [
+    {
+      rel: "icon",
+      url: Favicon.src,
+    },
+  ],
 };
 
 export default function RootLayout({
