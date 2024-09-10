@@ -60,7 +60,7 @@ const ContactSection = () => {
       <div className="flex flex-col lg:flex-row justify-between">
         <p className="text-white text-sm md:text-base font-poppins m-2 w-full lg:w-1/2">
           Hii, If you like my profile and want to connect with me please drop a
-          message. i will get back to u lets build someting crazy
+          message. i will get back to you lets build something crazy
         </p>
         <div className="w-full lg:w-1/2 flex flex-col gap-2 mt-2">
           <Input

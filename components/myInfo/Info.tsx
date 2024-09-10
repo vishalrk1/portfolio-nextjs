@@ -1,17 +1,14 @@
 import React from "react";
 import AboutmeButton from "../Buttons/aboutme-button";
 import ProjectButton from "../Buttons/project-button";
-import Image from "next/image";
-
-import pfpImage from "../../assets/pfp.jpg";
 
 import {
   FaLinkedin,
-  FaSquareGithub,
   FaSquareXTwitter,
   FaSquareInstagram,
 } from "react-icons/fa6";
 import Link from "next/link";
+import { IconCloudDemo } from "../IconCloud";
 
 const Info: React.FC = () => {
   return (
@@ -40,8 +37,8 @@ const Info: React.FC = () => {
           className="text-base md:text-[16px] text-white  font-light align-top tracking-wider"
         >
           I&apos;m a software developer specializing in building and developing
-          softwares with remarkable user experience. Having experince React,
-          React Native zand Next.JS, I build applications that are scalable and
+          softwares with remarkable user experience. Having experience in React,
+          React Native and Next JS, I build applications that are scalable and
           flexible.
         </p>
         <div
@@ -52,9 +49,7 @@ const Info: React.FC = () => {
           <AboutmeButton />
           <ProjectButton />
         </div>
-      </div>
-      <div className="flex md:justify-end items-center w-full md:w-1/2 md:mt-24 mb-10 gap-4">
-        <div className="flex flex-row md:flex-col items-center justify-center gap-4">
+        <div className="flex flex-row items-center mt-6 gap-4">
           <Link
             data-aos="fade-up"
             data-aos-delay="100"
@@ -80,11 +75,14 @@ const Info: React.FC = () => {
             <FaSquareInstagram size={28} color="white" />
           </Link>
         </div>
-        <Image
+      </div>
+      <div className="flex md:justify-end items-center w-full md:w-1/2 md:mt-24 mb-10 gap-4">
+        {/* <Image
           src={pfpImage}
           alt=""
           className="hidden md:block w-72 h-96 rounded-lg object-cover"
-        />
+        /> */}
+        <IconCloudDemo />
       </div>
     </section>
   );

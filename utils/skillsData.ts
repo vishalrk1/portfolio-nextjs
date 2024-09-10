@@ -14,6 +14,7 @@ import NextIcon from "../assets/skills/frontend/nextjs.svg";
 import ReduxIcon from "../assets/skills/frontend/redux.svg";
 import ReactNativeIcon from "../assets/skills/frontend/react-native-64.png";
 import TailwindIcon from "../assets/skills/frontend/tailwind-css.svg";
+import NodeIcon from "../assets/skills/frontend/nodeIcon.svg"
 
 // AI Ds icons
 import HuggingfaceIcon from "../assets/skills/AI-DS/hf-logo.svg";
@@ -58,7 +59,7 @@ export const FrontendData = [
   },
   {
     icon: ReactIcon,
-    name: "React",
+    name: "React Js",
   },
   {
     icon: NextIcon,
@@ -75,6 +76,10 @@ export const FrontendData = [
   {
     icon: TailwindIcon,
     name: "Tailwind CSS",
+  },
+  {
+    icon: NodeIcon,
+    name: "Node Js"
   },
 ] as Skill[];
 
