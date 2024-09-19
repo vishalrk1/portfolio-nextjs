@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+
+import { FaGithub } from "react-icons/fa";
+import { Globe } from "lucide-react";
+
 const FeaturedProjectsSection = () => {
   return (
     <section
@@ -59,30 +65,49 @@ const FeaturedProjectsSection = () => {
                       href={item.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-400 text-sm md:text-base hover:underline md:mb-2 inline-block"
+                      // className="text-blue-400 text-sm md:text-base hover:underline md:mb-2 inline-block"
                     >
-                      View Project
+                      <Button
+                        variant="default"
+                        className="flex items-center gap-2 bg-black text-white hover:bg-[#101010]"
+                      >
+                        <Globe size={16} className="hidden md:block" />
+                        Website
+                      </Button>
                     </Link>
                   )}
                   <Link
                     href={item.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 text-sm md:text-base hover:underline md:mb-2 inline-block"
+                    // className="text-blue-400 text-sm md:text-base hover:underline md:mb-2 inline-block"
                   >
-                    Github
+                    <Button
+                      variant="default"
+                      className="flex items-center gap-2 bg-black text-white hover:bg-[#101010]"
+                    >
+                      <FaGithub size={16} className="hidden md:block" />
+                      Github
+                    </Button>
                   </Link>
                 </div>
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
               {item.skills.map((tech, index) => (
-                <span
+                <Badge
                   key={index}
-                  className="bg-gray-800 text-xs text-white py-1 px-2 rounded-full"
+                  variant="default"
+                  className="bg-gray-800 text-xs font-normal text-white hover:bg-gray-800"
                 >
                   {tech.name}
-                </span>
+                </Badge>
+                // <span
+                //   key={index}
+                //   className="bg-gray-800 text-xs text-white py-1 px-2 rounded-full"
+                // >
+                //   {tech.name}
+                // </span>
               ))}
             </div>
           </div>
