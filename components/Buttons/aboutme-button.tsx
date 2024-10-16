@@ -1,6 +1,5 @@
 import { User } from "lucide-react";
 import React from "react";
-import { Button } from "../ui/button";
 
 const AboutmeButton: React.FC = () => {
   return (

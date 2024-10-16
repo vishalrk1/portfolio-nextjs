@@ -26,6 +26,7 @@ export interface Experience {
   endDate?: string;
   description: string[];
   isCurrent: boolean;
+  jobType: "Full Time" | "Part Time" | "Internship";
 }
 
 export interface Image {

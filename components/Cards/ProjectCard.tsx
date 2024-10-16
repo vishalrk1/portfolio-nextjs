@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Github } from "lucide-react";
 import { Project } from "@/utils/types";
 import ImageCarousel from "../ImageCarousel/imageCarousel";
 

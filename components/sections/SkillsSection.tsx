@@ -8,7 +8,7 @@ const SkillsSection = () => {
         Skills
       </h1>
       <div
-        data-aos="fade-up"
+        // data-aos="fade-up"
         className="flex flex-wrap gap-4 items-center justify-center my-8 md:m-8 "
       >
         {COMBINED_DATA.map((item, idx) => {

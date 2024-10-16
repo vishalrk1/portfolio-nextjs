@@ -6,7 +6,7 @@ import noLogo from "../assets/building-logo.png";
 export const ExperienceData = [
   {
     company: "JIO Platforms",
-    position: "Frontend Developer",
+    position: "Software Developer",
     companyLogo: jioLogo,
     description: [
       "Working on Chatbot for farmers. goal is to create an LLM based chatbot that can assist agronomists to resolve farmers queries with the help provided data.",
@@ -15,7 +15,8 @@ export const ExperienceData = [
       "Alog with web I have been working on a Internal mobile application with React Native",
     ],
     isCurrent: true,
-    startDate: "6-12-2023",
+    startDate: "5-1-2023",
+    jobType: "Full Time",
   },
   {
     company: "HDFC Life",
@@ -29,5 +30,6 @@ export const ExperienceData = [
     isCurrent: false,
     startDate: "6-9-2022",
     endDate: "12-9-2022",
+    jobType: "Internship",
   },
 ] as Experience[];
