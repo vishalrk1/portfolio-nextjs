@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Route, navRoutes } from "./routes";
+import { navRoutes } from "./routes";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
-import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 
 const Navbar = () => {
   const updateActiveRoute = (sectionId: string) => {

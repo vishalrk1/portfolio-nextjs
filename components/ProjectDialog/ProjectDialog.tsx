@@ -1,5 +1,5 @@
 "use client";
-import { Experience, Project } from "@/utils/types";
+import { Project } from "@/utils/types";
 import React from "react";
 import Modal from "../ui/modal";
 import ImageCarousel from "../ImageCarousel/imageCarousel";
@@ -26,7 +26,11 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({
       onClose={onClose}
     >
       <div className="flex flex-col gap-4">
-        <ImageCarousel images={project?.images} autoplay={true} className="w-100 h-100 w-3/4"/>
+        <ImageCarousel
+          images={project?.images}
+          autoplay={true}
+          className="w-100 h-100 w-3/4"
+        />
         <h1 className="text-lg md:text-2xl text-white font-semibold mt-6">
           Technologies Used
         </h1>

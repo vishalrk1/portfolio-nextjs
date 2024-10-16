@@ -1,8 +1,8 @@
 import React from "react";
 import dayjs from "dayjs";
-import { Experience } from "@/utils/types";
 import Image from "next/image";
-import AOS from "aos";
+
+import { Experience } from "@/utils/types";
 import "aos/dist/aos.css";
 
 interface ExperienceSectionProps {
