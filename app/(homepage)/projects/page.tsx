@@ -1,21 +1,27 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { featuredProjects, ProjectsData } from "@/utils/projectsData";
-import { Project } from "@/utils/types";
+import {
+  aiMlData,
+  androidDevelopmentProjects,
+  backendDevData,
+  webDevelopmentProjects,
+} from "@/utils/projectsData";
+import { Project, ProjectType } from "@/utils/types";
 import AllProjectCard from "@/components/Cards/AllProjectCard";
 
 interface Tab {
   id: number;
-  title: "Web Development" | "Android Development" | "AI/ML";
+  title: ProjectType;
   data: Project[];
 }
 
 const ProjectScreen = () => {
   const tabs: Tab[] = [
-    { id: 1, title: "Web Development", data: ProjectsData },
-    { id: 2, title: "Android Development", data: featuredProjects },
-    { id: 3, title: "AI/ML", data: [] },
+    { id: 1, title: "Web Development", data: webDevelopmentProjects },
+    { id: 2, title: "Backend Development", data: backendDevData },
+    { id: 3, title: "Android Development", data: androidDevelopmentProjects },
+    { id: 4, title: "AI/ML", data: aiMlData },
   ];
   const [activeTab, setActiveTab] = useState<number>(tabs[0].id);
   const [sliderWidth, setSliderWidth] = useState<number>(0);
@@ -35,7 +41,7 @@ const ProjectScreen = () => {
   }, [activeTab]);
 
   return (
-    <main className="text-primary min-h-screen">
+    <main className="text-primary bg-secondary min-h-screen">
       <h1 className="text-3xl text-white font-semibold px-6 md:px-12 xl:px-40 py-8 mb-2 md:mb-6">
         All Projects
       </h1>
@@ -46,7 +52,7 @@ const ProjectScreen = () => {
               <button
                 key={tab.id}
                 ref={setTabRef(index)}
-                className={`flex-1 py-2 px-4 text-base md:text-xl font-medium ${
+                className={`flex-1 py-2 px-4 text-sm md:text-xl font-medium ${
                   activeTab === tab.id ? "text-white" : "text-primary"
                 }`}
                 onClick={() => setActiveTab(tab.id)}
@@ -77,7 +83,12 @@ const ProjectScreen = () => {
             {tabs
               .find((tab) => tab.id === activeTab)
               ?.data.map((item, index) => (
-                <AllProjectCard item={item} index={index} key={item.name} />
+                <AllProjectCard
+                  item={item}
+                  index={index}
+                  key={item.name}
+                  once={true}
+                />
               ))}
           </motion.div>
         </AnimatePresence>

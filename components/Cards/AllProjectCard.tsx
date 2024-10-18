@@ -11,11 +11,17 @@ import { Badge } from "../ui/badge";
 interface AllProjectCardProps {
   item: Project;
   index: number;
+  once: boolean;
 }
 
-const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
+const AllProjectCard: React.FC<AllProjectCardProps> = ({
+  item,
+  index,
+  once,
+}) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: once, amount: 0.2 });
+  const isFlipped = index % 2 !== 0;
 
   const cardVariants: Variants = {
     offscreen: {
@@ -59,12 +65,12 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
       animate={isInView ? "onscreen" : "offscreen"}
       variants={cardVariants}
       className={`flex items-center ${
-        item.isFlipped ? `flex-col md:flex-row-reverse` : `flex-col md:flex-row`
+        isFlipped ? `flex-col md:flex-row-reverse` : `flex-col md:flex-row`
       }`}
     >
       <motion.div
         className={`relative aspect-video max-w-[700px] w-full max-h-[450px] h-1/2 top-12 md:top-0 ${
-          item.isFlipped ? `md:right-12` : `md:left-12`
+          isFlipped ? `md:right-12` : `md:left-12`
         }`}
         transition={{ type: "spring", stiffness: 300, damping: 10 }}
       >
@@ -78,8 +84,8 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
       <motion.div
         variants={detailsVariants}
         className={`relative flex flex-col justify-start gap-4 ${
-          item.isFlipped ? `md:left-24 items-start` : `md:right-24 items-end`
-        } md:[--x-direction:${item.isFlipped ? "-50px" : "50px"}]`}
+          isFlipped ? `md:left-24 items-start` : `md:right-24 items-end`
+        } md:[--x-direction:${isFlipped ? "-50px" : "50px"}]`}
         style={
           {
             "--y-direction": "50px",
@@ -87,7 +93,7 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
           } as React.CSSProperties
         }
       >
-        <h1 className="hidden md:block text-3xl font-bold px-2 text-white">
+        <h1 className="hidden md:block text-xl lg:text-2xl 2xl:text-3xl font-bold px-2 text-white">
           {item.name}
         </h1>
         <motion.div
@@ -99,7 +105,7 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
             <h1 className="block md:hidden text-lg mb-2 font-bold text-white">
               {item.name}
             </h1>
-            <p className="mb-4 text-sm md:text-base">{item.description}</p>
+            <p className="mb-4 text-sm xl:text-base">{item.description}</p>
             <div className="flex items-center space-x-3">
               {item.liveLink && (
                 <Link
@@ -109,7 +115,7 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
                 >
                   <Button
                     variant="default"
-                    className="flex items-center gap-2 bg-black text-white hover:bg-[#101010]"
+                    className="flex items-center gap-2 bg-black text-white hover:bg-[#101010] text-sm md:text-base"
                   >
                     <Globe size={16} className="hidden md:block" />
                     Website
@@ -123,7 +129,7 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
               >
                 <Button
                   variant="default"
-                  className="flex items-center gap-2 bg-black text-white hover:bg-[#101010]"
+                  className="flex items-center gap-2 bg-black text-white hover:bg-[#101010] text-sm md:text-base"
                 >
                   <FaGithub size={16} className="hidden md:block" />
                   Github
@@ -133,7 +139,7 @@ const AllProjectCard: React.FC<AllProjectCardProps> = ({ item, index }) => {
           </div>
         </motion.div>
         <motion.div
-          className="flex flex-wrap gap-2"
+          className="flex flex-wrap gap-2 w-full"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}

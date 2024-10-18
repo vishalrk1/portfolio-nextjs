@@ -1,13 +1,7 @@
 import { ProjectsData } from "@/utils/projectsData";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
-
-import { FaGithub } from "react-icons/fa";
-import { Globe } from "lucide-react";
+import AllProjectCard from "../Cards/AllProjectCard";
+import ViewProjectsButton from "../Buttons/ViewProjectsButton";
 
 const FeaturedProjectsSection = () => {
   return (
@@ -15,98 +9,23 @@ const FeaturedProjectsSection = () => {
       id="projects"
       className="flex flex-col gap-8 justify-center bg-secondary w-full px-6 md:px-12 xl:px-40 py-8"
     >
-      <h1 className="font-semibold text-3xl md:text-4xl font-poppins mt-8">
-        Featured Projects
-      </h1>
+      <div className="flex flex-col md:flex-row items-start gap-3 md:items-center md:justify-between mt-8 py-2">
+        <h1 className="font-semibold text-3xl md:text-4xl font-poppins">
+          Featured Projects
+        </h1>
+        <ViewProjectsButton animate={true} />
+      </div>
       {ProjectsData.filter((item) => item.isFeatured).map((item, index) => (
-        <div
-          data-aos="fade-up"
+        <AllProjectCard
           key={`${item.name}-${index}`}
-          data-aos-delay="50"
-          className={`flex items-center  ${
-            item.isFlipped
-              ? `flex-col md:flex-row-reverse`
-              : `flex-col md:flex-row`
-          }`}
-        >
-          <div
-            className={`relative aspect-video max-w-[700px] w-full max-h-[450px] h-1/2 top-12 md:top-0 ${
-              item.isFlipped ? `md:right-12` : `md:left-12`
-            }`}
-          >
-            <Image
-              src={item.images[0].url}
-              alt={item.images[0].alt}
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div
-            className={`relative flex flex-col justify-start gap-4 ${
-              item.isFlipped
-                ? `md:left-24 items-start`
-                : `md:right-24 items-end`
-            }`}
-          >
-            <h1 className="hidden md:block text-3xl font-bold px-2 text-white">
-              {item.name}
-            </h1>
-            <div
-              className={`bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden flex h-max w-full`}
-            >
-              <div className="p-6">
-                <h1 className="block md:hidden text-lg mb-2 font-bold text-white">
-                  {item.name}
-                </h1>
-                <p className="mb-4 text-sm md:text-base">{item.description}</p>
-                <div className="flex items-center space-x-3">
-                  {item.liveLink && (
-                    <Link
-                      href={item.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      // className="text-blue-400 text-sm md:text-base hover:underline md:mb-2 inline-block"
-                    >
-                      <Button
-                        variant="default"
-                        className="flex items-center gap-2 bg-black text-white hover:bg-[#101010]"
-                      >
-                        <Globe size={16} className="hidden md:block" />
-                        Website
-                      </Button>
-                    </Link>
-                  )}
-                  <Link
-                    href={item.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    // className="text-blue-400 text-sm md:text-base hover:underline md:mb-2 inline-block"
-                  >
-                    <Button
-                      variant="default"
-                      className="flex items-center gap-2 bg-black text-white hover:bg-[#101010]"
-                    >
-                      <FaGithub size={16} className="hidden md:block" />
-                      Github
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {item.skills.map((tech, index) => (
-                <Badge
-                  key={index}
-                  variant="default"
-                  className="bg-gray-800 text-xs font-normal text-white hover:bg-gray-800"
-                >
-                  {tech.name}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </div>
+          item={item}
+          index={index}
+          once={false}
+        />
       ))}
+      <div className="py-12 flex items-center justify-center w-full">
+        <ViewProjectsButton animate={true} className="hover:scale-110"/>
+      </div>
     </section>
   );
 };

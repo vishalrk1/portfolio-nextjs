@@ -1,21 +1,42 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { navRoutes } from "./routes";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
-  const updateActiveRoute = (sectionId: string) => {
-    navRoutes.forEach((route) => {
-      if (route.sectionId === sectionId) {
-        route.isActive = true;
-      } else {
-        route.isActive = false;
-      }
-    });
+  const router = useRouter();
+  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("");
+
+  const updateActiveRoute = useCallback(
+    (sectionId: string) => {
+      navRoutes.forEach((route) => {
+        route.isActive =
+          route.sectionId === sectionId || route.path === pathname;
+      });
+    },
+    [pathname]
+  );
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [activeSection, setActiveSection] = useState("");
+  const handleNavClick = useCallback(
+    (path: string, sectionId: string) => {
+      if (path.startsWith("#")) {
+        scrollToSection(sectionId);
+      } else {
+        router.push(path);
+      }
+      updateActiveRoute(sectionId);
+      setActiveSection(sectionId);
+    },
+    [router, updateActiveRoute]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +47,10 @@ const Navbar = () => {
         const sectionTop = section.offsetTop;
         const sectionBottom = sectionTop + section.offsetHeight;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        if (
+          window.scrollY >= sectionTop - 100 &&
+          window.scrollY < sectionBottom
+        ) {
           currentSectionId = section.id;
         }
       });
@@ -38,32 +62,32 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection, updateActiveRoute]);
 
   return (
-    <nav className="sticky top-0 left-0 bg-[#181824] flex justify-between md:justify-center items-center tracking-wider h-[80px] px-4 md:px-40 py-5 md:space-x-52 z-10">
-      <h1 className="hidden md:block text-base md:text-[28px] font-semibold text-primary">
-        VISHAL
-      </h1>
+    <nav className="sticky top-0 left-0 right-0 bg-[#181824] flex justify-between md:justify-center items-center tracking-wider h-20 px-4 md:px-40 py-5 md:space-x-52 z-30">
+      <Link href="/" className="hidden md:block">
+        <h1 className="text-base md:text-[28px] font-semibold text-primary">
+          VISHAL
+        </h1>
+      </Link>
       <div className="flex space-x-3 md:space-x-10">
-        {navRoutes.map((item, index) => (
-          <Link
+        {navRoutes.map((item) => (
+          <a
             href={item.path}
-            key={index}
-            onClick={() => updateActiveRoute(item.path)}
+            key={item.sectionId}
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick(item.path, item.sectionId);
+            }}
+            className={twMerge(
+              "text-sm md:text-lg font-semibold tracking-wide cursor-pointer transition-colors duration-200",
+              item.isActive ? "text-primary" : "text-white hover:text-primary"
+            )}
           >
-            <p
-              className={twMerge(
-                "text-sm md:text-[18px] font-semibold tracking-wide cursor-pointer",
-                item.isActive ? "text-primary" : "text-white"
-              )}
-            >
-              {item.title}
-            </p>
-          </Link>
+            {item.title}
+          </a>
         ))}
       </div>
     </nav>

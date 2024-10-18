@@ -15,7 +15,7 @@ export const navRoutes = [
   {
     title: "Projects",
     sectionId: "projects",
-    path: "#projects",
+    path: "/projects",
     isActive: false,
   },
   {

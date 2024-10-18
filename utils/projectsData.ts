@@ -8,58 +8,6 @@ import { Image, Project, Skill } from "./types";
 
 export const ProjectsData = [
   {
-    name: "SeeFood 🍔",
-    description:
-      "SeeFood is a website with image classification model which classifies uploaded food images and displays similar dishes, their recipes and calorie breakdown.",
-    githubLink: "https://github.com/vishalrk1/seefood-ai",
-    isFeatured: true,
-    liveLink: "https://seefoodai.netlify.app/",
-    isFlipped: false,
-    projectTypes: ["AI/ML", "Web Development"],
-    images: [
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-1.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-4.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-5.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-6.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-7.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-2.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-3.png",
-        alt: "project-seeFood",
-      },
-    ] as Image[],
-    skills: [
-      PrograminLanguagesData[0],
-      FrontendData[2],
-      AI_DSData[2],
-      BackendData[0],
-    ] as Skill[],
-    projectFeatures: [
-      "Image Classification",
-      "Image Upload",
-      "Food Recipies",
-      "Caloric Breakdown",
-    ] as String[],
-  },
-  {
     name: "Jewellery Store Website 🛒",
     description:
       "Developed a fully responsive Jewellery Store website using Next js, Tailwind css, context API and Django for backend. showcasing a wide range of jewellery products with user-friendly navigation and interactive features.",
@@ -67,7 +15,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/JewelleryShop",
     isFeatured: true,
     isFlipped: true,
-    projectTypes: ["Web Development"],
+    projectTypes: ["Web Development", "Backend Development"],
     images: [
       {
         url: "https://github.com/user-attachments/assets/f68835e2-ff91-4417-ae1b-2ce4512a4ae5",
@@ -120,6 +68,65 @@ export const ProjectsData = [
       "Product Management",
       "Order Management",
       "User Management",
+    ] as String[],
+  },
+  {
+    name: "MegaLinks Website 💻",
+    description:
+      "Developed Megalinks website using Next JS, Tailwind CSS, and TypeScript, with state management powered by Redux, for accessing free video editing resources like scenepacks and tutorials",
+    liveLink: "https://megalinks.vercel.app/",
+    githubLink:
+      "https://github.com/vishalrk1/megalinks-website-nextjs/tree/main",
+    isFeatured: true,
+    isFlipped: false,
+    projectTypes: ["Web Development"],
+    images: [
+      {
+        url: "https://github.com/user-attachments/assets/a407ede5-d7e5-4c9f-88aa-b6a7e07f3e4b",
+        alt: "first-panel-ss",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-2.png",
+        alt: "first-panel-ss",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-3.png",
+        alt: "first-panel-ss",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-4.png",
+        alt: "first-panel-ss",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-5.png",
+        alt: "first-panel-ss",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-6.png",
+        alt: "first-panel-ss",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-67.png",
+        alt: "first-panel-ss",
+      },
+    ] as Image[],
+    skills: [
+      PrograminLanguagesData[2],
+      FrontendData[0],
+      FrontendData[2],
+      FrontendData[3],
+      FrontendData[4],
+      FrontendData[6],
+    ] as Skill[],
+    projectFeatures: [
+      "Free Video Editing Resources",
+      "Scenepacks",
+      "Tutorials",
+      "User-friendly Interface",
+      "State Management with Redux",
+      "Responsive Design",
+      "Dark Mode",
+      "Authentication",
     ] as String[],
   },
   {
@@ -180,62 +187,55 @@ export const ProjectsData = [
     ] as Skill[],
   },
   {
-    name: "MegaLinks Website 💻",
+    name: "SeeFood 🍔",
     description:
-      "Developed Megalinks website using Next JS, Tailwind CSS, and TypeScript, with state management powered by Redux, for accessing free video editing resources like scenepacks and tutorials",
-    liveLink: "https://megalinks.vercel.app/",
-    githubLink:
-      "https://github.com/vishalrk1/megalinks-website-nextjs/tree/main",
+      "SeeFood is a website with image classification model which classifies uploaded food images and displays similar dishes, their recipes and calorie breakdown.",
+    githubLink: "https://github.com/vishalrk1/seefood-ai",
     isFeatured: true,
+    liveLink: "https://seefoodai.netlify.app/",
     isFlipped: false,
-    projectTypes: ["Web Development"],
+    projectTypes: ["AI/ML", "Web Development"],
     images: [
       {
-        url: "https://github.com/user-attachments/assets/a407ede5-d7e5-4c9f-88aa-b6a7e07f3e4b",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-1.png",
+        alt: "project-seeFood",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-2.png",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-4.png",
+        alt: "project-seeFood",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-3.png",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-5.png",
+        alt: "project-seeFood",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-4.png",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-6.png",
+        alt: "project-seeFood",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-5.png",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-7.png",
+        alt: "project-seeFood",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-6.png",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-2.png",
+        alt: "project-seeFood",
       },
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-67.png",
-        alt: "first-panel-ss",
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-3.png",
+        alt: "project-seeFood",
       },
     ] as Image[],
     skills: [
-      PrograminLanguagesData[2],
-      FrontendData[0],
+      PrograminLanguagesData[0],
       FrontendData[2],
-      FrontendData[3],
-      FrontendData[4],
-      FrontendData[6],
+      AI_DSData[2],
+      BackendData[0],
     ] as Skill[],
     projectFeatures: [
-      "Free Video Editing Resources",
-      "Scenepacks",
-      "Tutorials",
-      "User-friendly Interface",
-      "State Management with Redux",
-      "Responsive Design",
-      "Dark Mode",
-      "Authentication",
+      "Image Classification",
+      "Image Upload",
+      "Food Recipies",
+      "Caloric Breakdown",
     ] as String[],
   },
   {
@@ -410,4 +410,24 @@ export const ProjectsData = [
 
 export const featuredProjects = ProjectsData.filter(
   (item) => item.isFeatured === true
+);
+
+export const webDevelopmentProjects = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Web Development")
+);
+
+export const androidDevelopmentProjects = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Android Development")
+);
+
+export const backendDevData = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Backend Development")
+);
+
+export const aiMlData = ProjectsData.filter((item) =>
+  item.projectTypes.includes("AI/ML")
+);
+
+export const dataScienceData = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Data Science")
 );
