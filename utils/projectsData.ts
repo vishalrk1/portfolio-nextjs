@@ -15,6 +15,7 @@ export const ProjectsData = [
     isFeatured: true,
     liveLink: "https://seefoodai.netlify.app/",
     isFlipped: false,
+    projectTypes: ["AI/ML", "Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-1.png",
@@ -66,6 +67,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/JewelleryShop",
     isFeatured: true,
     isFlipped: true,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://github.com/user-attachments/assets/f68835e2-ff91-4417-ae1b-2ce4512a4ae5",
@@ -128,6 +130,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/MegaLinksApk",
     isFeatured: true,
     isFlipped: false,
+    projectTypes: ["Android Development"],
     images: [
       {
         url: "https://github.com/vishalrk1/MegaLinksApk/assets/59719046/7a9bb39c-2a0c-4443-af0c-ad4037d15fba",
@@ -160,6 +163,7 @@ export const ProjectsData = [
     isFlipped: true,
     liveLink: "",
     projectFeatures: [],
+    projectTypes: ["Web Development", "Backend Development"],
     images: [
       {
         alt: "BTC-alerting-vishal-karangale",
@@ -184,6 +188,7 @@ export const ProjectsData = [
       "https://github.com/vishalrk1/megalinks-website-nextjs/tree/main",
     isFeatured: true,
     isFlipped: false,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://github.com/user-attachments/assets/a407ede5-d7e5-4c9f-88aa-b6a7e07f3e4b",
@@ -241,6 +246,7 @@ export const ProjectsData = [
     liveLink: "",
     isFeatured: false,
     isFlipped: true,
+    projectTypes: ["AI/ML", "Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/SkimLit/main/images/app.png",
@@ -263,6 +269,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/megalinks-admin-portal",
     isFeatured: false,
     isFlipped: false,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/megalinks-admin-portal/main/screenshots/img-1.png",
@@ -334,6 +341,7 @@ export const ProjectsData = [
       "https://github.com/vishalrk1/Ecommerce-website-react/tree/master",
     isFeatured: false,
     isFlipped: true,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/Ecommerce-website-react/master/demo-images/img-1.png",
@@ -399,3 +407,7 @@ export const ProjectsData = [
     ] as String[],
   },
 ] as Project[];
+
+export const featuredProjects = ProjectsData.filter(
+  (item) => item.isFeatured === true
+);

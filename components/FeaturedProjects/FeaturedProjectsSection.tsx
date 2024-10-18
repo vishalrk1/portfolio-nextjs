@@ -102,12 +102,6 @@ const FeaturedProjectsSection = () => {
                 >
                   {tech.name}
                 </Badge>
-                // <span
-                //   key={index}
-                //   className="bg-gray-800 text-xs text-white py-1 px-2 rounded-full"
-                // >
-                //   {tech.name}
-                // </span>
               ))}
             </div>
           </div>
