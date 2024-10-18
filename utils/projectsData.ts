@@ -186,7 +186,7 @@ export const ProjectsData = [
     isFlipped: false,
     images: [
       {
-        url: "https://raw.githubusercontent.com/vishalrk1/megalinks-website-nextjs/main/screenshots/ss-1.png",
+        url: "https://github.com/user-attachments/assets/a407ede5-d7e5-4c9f-88aa-b6a7e07f3e4b",
         alt: "first-panel-ss",
       },
       {
