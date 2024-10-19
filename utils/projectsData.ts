@@ -8,57 +8,6 @@ import { Image, Project, Skill } from "./types";
 
 export const ProjectsData = [
   {
-    name: "SeeFood 🍔",
-    description:
-      "SeeFood is a website with image classification model which classifies uploaded food images and displays similar dishes, their recipes and calorie breakdown.",
-    githubLink: "https://github.com/vishalrk1/seefood-ai",
-    isFeatured: true,
-    liveLink: "https://seefoodai.netlify.app/",
-    isFlipped: false,
-    images: [
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-1.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-4.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-5.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-6.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-7.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-2.png",
-        alt: "project-seeFood",
-      },
-      {
-        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-3.png",
-        alt: "project-seeFood",
-      },
-    ] as Image[],
-    skills: [
-      PrograminLanguagesData[0],
-      FrontendData[2],
-      AI_DSData[2],
-      BackendData[0],
-    ] as Skill[],
-    projectFeatures: [
-      "Image Classification",
-      "Image Upload",
-      "Food Recipies",
-      "Caloric Breakdown",
-    ] as String[],
-  },
-  {
     name: "Jewellery Store Website 🛒",
     description:
       "Developed a fully responsive Jewellery Store website using Next js, Tailwind css, context API and Django for backend. showcasing a wide range of jewellery products with user-friendly navigation and interactive features.",
@@ -66,6 +15,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/JewelleryShop",
     isFeatured: true,
     isFlipped: true,
+    projectTypes: ["Web Development", "Backend Development"],
     images: [
       {
         url: "https://github.com/user-attachments/assets/f68835e2-ff91-4417-ae1b-2ce4512a4ae5",
@@ -121,61 +71,6 @@ export const ProjectsData = [
     ] as String[],
   },
   {
-    name: "MegaLinks App 📱",
-    description:
-      "Megalinks is an android app built with react native and firebase, where we provide free resources available for video editing, like Scenepacks, project files of the big editor, tutorials, etc..",
-    liveLink: "https://play.google.com/store/apps/details?id=com.vk.MegaLinks",
-    githubLink: "https://github.com/vishalrk1/MegaLinksApk",
-    isFeatured: true,
-    isFlipped: false,
-    images: [
-      {
-        url: "https://github.com/vishalrk1/MegaLinksApk/assets/59719046/7a9bb39c-2a0c-4443-af0c-ad4037d15fba",
-        alt: "android-apk",
-      },
-    ] as Image[],
-    skills: [
-      PrograminLanguagesData[1],
-      PrograminLanguagesData[2],
-      FrontendData[5],
-      BackendData[2],
-    ] as Skill[],
-    projectFeatures: [
-      "Free Video Editing Resources",
-      "Scenepacks",
-      "Tutorials",
-      "User-friendly Interface",
-      "State Management with Redux",
-      "Responsive Design",
-      "Dark Mode",
-      "Authentication",
-    ] as String[],
-  },
-  {
-    name: "Bitcoin Alerting System 🔔",
-    description:
-      "The Bitcoin Alert System is a comprehensive web application designed to provide real-time notifications for Bitcoin price movements.",
-    githubLink: "https://github.com/vishalrk1/BTCAlert",
-    isFeatured: true,
-    isFlipped: true,
-    liveLink: "",
-    projectFeatures: [],
-    images: [
-      {
-        alt: "BTC-alerting-vishal-karangale",
-        url: "https://github.com/user-attachments/assets/1c0f40da-f67d-4d6b-b67a-e3429543de25",
-      },
-    ],
-    skills: [
-      PrograminLanguagesData[1],
-      PrograminLanguagesData[2],
-      FrontendData[0],
-      FrontendData[2],
-      FrontendData[6],
-      FrontendData[7],
-    ] as Skill[],
-  },
-  {
     name: "MegaLinks Website 💻",
     description:
       "Developed Megalinks website using Next JS, Tailwind CSS, and TypeScript, with state management powered by Redux, for accessing free video editing resources like scenepacks and tutorials",
@@ -184,6 +79,7 @@ export const ProjectsData = [
       "https://github.com/vishalrk1/megalinks-website-nextjs/tree/main",
     isFeatured: true,
     isFlipped: false,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://github.com/user-attachments/assets/a407ede5-d7e5-4c9f-88aa-b6a7e07f3e4b",
@@ -234,6 +130,115 @@ export const ProjectsData = [
     ] as String[],
   },
   {
+    name: "MegaLinks App 📱",
+    description:
+      "Megalinks is an android app built with react native and firebase, where we provide free resources available for video editing, like Scenepacks, project files of the big editor, tutorials, etc..",
+    liveLink: "https://play.google.com/store/apps/details?id=com.vk.MegaLinks",
+    githubLink: "https://github.com/vishalrk1/MegaLinksApk",
+    isFeatured: true,
+    isFlipped: false,
+    projectTypes: ["Android Development"],
+    images: [
+      {
+        url: "https://github.com/vishalrk1/MegaLinksApk/assets/59719046/7a9bb39c-2a0c-4443-af0c-ad4037d15fba",
+        alt: "android-apk",
+      },
+    ] as Image[],
+    skills: [
+      PrograminLanguagesData[1],
+      PrograminLanguagesData[2],
+      FrontendData[5],
+      BackendData[2],
+    ] as Skill[],
+    projectFeatures: [
+      "Free Video Editing Resources",
+      "Scenepacks",
+      "Tutorials",
+      "User-friendly Interface",
+      "State Management with Redux",
+      "Responsive Design",
+      "Dark Mode",
+      "Authentication",
+    ] as String[],
+  },
+  {
+    name: "Bitcoin Alerting System 🔔",
+    description:
+      "The Bitcoin Alert System is a comprehensive web application designed to provide real-time notifications for Bitcoin price movements.",
+    githubLink: "https://github.com/vishalrk1/BTCAlert",
+    isFeatured: true,
+    isFlipped: true,
+    liveLink: "",
+    projectFeatures: [],
+    projectTypes: ["Web Development", "Backend Development"],
+    images: [
+      {
+        alt: "BTC-alerting-vishal-karangale",
+        url: "https://github.com/user-attachments/assets/1c0f40da-f67d-4d6b-b67a-e3429543de25",
+      },
+    ],
+    skills: [
+      PrograminLanguagesData[1],
+      PrograminLanguagesData[2],
+      FrontendData[0],
+      FrontendData[2],
+      FrontendData[6],
+      FrontendData[7],
+    ] as Skill[],
+  },
+  {
+    name: "SeeFood 🍔",
+    description:
+      "SeeFood is a website with image classification model which classifies uploaded food images and displays similar dishes, their recipes and calorie breakdown.",
+    githubLink: "https://github.com/vishalrk1/seefood-ai",
+    isFeatured: true,
+    liveLink: "https://seefoodai.netlify.app/",
+    isFlipped: false,
+    projectTypes: ["AI/ML", "Web Development"],
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-1.png",
+        alt: "project-seeFood",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-4.png",
+        alt: "project-seeFood",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-5.png",
+        alt: "project-seeFood",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-6.png",
+        alt: "project-seeFood",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-7.png",
+        alt: "project-seeFood",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-2.png",
+        alt: "project-seeFood",
+      },
+      {
+        url: "https://raw.githubusercontent.com/vishalrk1/seefood-ai/combined/screenshot/img-3.png",
+        alt: "project-seeFood",
+      },
+    ] as Image[],
+    skills: [
+      PrograminLanguagesData[0],
+      FrontendData[2],
+      AI_DSData[2],
+      BackendData[0],
+    ] as Skill[],
+    projectFeatures: [
+      "Image Classification",
+      "Image Upload",
+      "Food Recipies",
+      "Caloric Breakdown",
+    ] as String[],
+  },
+  {
     name: "Skimlit",
     description:
       "An NLP model to classify abstract sentences into the role they play (e.g. objective, methods, results, etc..) to enable researchers to skim through the literature and dive deeper when necessary.",
@@ -241,6 +246,7 @@ export const ProjectsData = [
     liveLink: "",
     isFeatured: false,
     isFlipped: true,
+    projectTypes: ["AI/ML", "Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/SkimLit/main/images/app.png",
@@ -263,6 +269,7 @@ export const ProjectsData = [
     githubLink: "https://github.com/vishalrk1/megalinks-admin-portal",
     isFeatured: false,
     isFlipped: false,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/megalinks-admin-portal/main/screenshots/img-1.png",
@@ -334,6 +341,7 @@ export const ProjectsData = [
       "https://github.com/vishalrk1/Ecommerce-website-react/tree/master",
     isFeatured: false,
     isFlipped: true,
+    projectTypes: ["Web Development"],
     images: [
       {
         url: "https://raw.githubusercontent.com/vishalrk1/Ecommerce-website-react/master/demo-images/img-1.png",
@@ -399,3 +407,27 @@ export const ProjectsData = [
     ] as String[],
   },
 ] as Project[];
+
+export const featuredProjects = ProjectsData.filter(
+  (item) => item.isFeatured === true
+);
+
+export const webDevelopmentProjects = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Web Development")
+);
+
+export const androidDevelopmentProjects = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Android Development")
+);
+
+export const backendDevData = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Backend Development")
+);
+
+export const aiMlData = ProjectsData.filter((item) =>
+  item.projectTypes.includes("AI/ML")
+);
+
+export const dataScienceData = ProjectsData.filter((item) =>
+  item.projectTypes.includes("Data Science")
+);

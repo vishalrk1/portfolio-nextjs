@@ -15,7 +15,6 @@ import { ExperienceData } from "@/utils/experienceData";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "@/components/footer/footer";
 
 const Homepage = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -30,7 +29,6 @@ const Homepage = () => {
   if (!isMounted) return null;
 
   return (
-    <>
       <main className="flex flex-col justify-center text-primary min-h-screen">
         <Info />
         <SpaceSection />
@@ -59,8 +57,6 @@ const Homepage = () => {
         <SkillsSection />
         <ContactSection />
       </main>
-      <Footer />
-    </>
   );
 };
 

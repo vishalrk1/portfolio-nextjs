@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ToasterProvider } from "@/providers/ToastProvider";
 import { Analytics } from "@vercel/analytics/react";
 import Favicon from "./favicon.png";
+import Footer from "@/components/footer/footer";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Analytics />
+          <Footer />
         </TooltipProvider>
       </body>
     </html>

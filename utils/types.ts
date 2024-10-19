@@ -6,6 +6,14 @@ export interface Skill {
   icon: string;
 }
 
+export type ProjectType =
+  | "Web Development"
+  | "Android Development"
+  | "AI/ML"
+  | "Data Science"
+  | "Backend Development"
+  | "Game Development";
+
 export interface Project {
   name: string;
   description: string;
@@ -16,6 +24,7 @@ export interface Project {
   images: Image[];
   skills: Skill[];
   projectFeatures: String[];
+  projectTypes: ProjectType[];
 }
 
 export interface Experience {
