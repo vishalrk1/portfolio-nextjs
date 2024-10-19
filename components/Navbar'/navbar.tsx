@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, useCallback } from "react";
-import { navRoutes } from "./routes";
+import { navRoutes, Route } from "./routes";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -10,9 +10,11 @@ const Navbar = () => {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("");
 
+  let routes: Route[] = pathname === "/" ? navRoutes : navRoutes.slice(0,2)
+
   const updateActiveRoute = useCallback(
     (sectionId: string) => {
-      navRoutes.forEach((route) => {
+      routes.forEach((route) => {
         route.isActive =
           route.sectionId === sectionId || route.path === pathname;
       });
@@ -66,14 +68,25 @@ const Navbar = () => {
   }, [activeSection, updateActiveRoute]);
 
   return (
-    <nav className="sticky top-0 left-0 right-0 bg-[#181824] flex justify-between md:justify-center items-center tracking-wider h-20 px-4 md:px-40 py-5 md:space-x-52 z-30">
+    <nav className="sticky top-0 left-0 right-0 bg-[#181824] flex justify-between md:justify-start items-center tracking-wider h-20 px-4 md:px-40 py-5 md:space-x-52 z-30">
       <Link href="/" className="hidden md:block">
         <h1 className="text-base md:text-[28px] font-semibold text-primary">
           VISHAL
         </h1>
       </Link>
-      <div className="flex space-x-3 md:space-x-10">
-        {navRoutes.map((item) => (
+      <div className="flex gap-6">
+        {pathname !== "/" && (
+          <a
+            href={"/"}
+            className={twMerge(
+              "text-sm md:text-lg font-semibold tracking-wide cursor-pointer transition-colors duration-200",
+              "text-white hover:text-primary"
+            )}
+          >
+            Home
+          </a>
+        )}
+        {routes.map((item) => (
           <a
             href={item.path}
             key={item.sectionId}
